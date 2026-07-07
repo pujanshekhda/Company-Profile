@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Slick Slider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Sofia Pro", Sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1460px;
+            padding: 0px 15px;
+            margin: 0 auto;
+        }
+
+
+        .slider-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            padding: 40px 0;
+        }
+
+        .imageslide {
+            background: #f2f2f2;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .contact-1 {
+            display: flex;
+        }
+
+        .con-img img {
+            width: 80px;
+        }
+
+        .con1-p {
+            color: #555;
+        }
+
+        /* Side Buttons */
+        .side-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #fff;
+            color: #232831;
+            border: none;
+            font-size: 22px;
+            padding: 10px 14px;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .side-btn.prev {
+            left: 15px;
+        }
+
+        .side-btn.next {
+            right: 15px;
+        }
+
+
+        
+        /* Slick spacing */
+        .con-section .slide-con {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="slider-wrapper">
+
+        <!-- Side Buttons -->
+        <button id="prevBtn" class="side-btn prev">&#10094;</button>
+        <button id="nextBtn" class="side-btn next">&#10095;</button>
+
+        <!-- Slider -->
+        <div class="con-section">
+
+            <!-- Slide 1 -->
+            <div class="slide-con">
+                <div class="imageslide">
+                    <div class="contact-1">
+                        <div class="con-img">
+                            <img src="image/sylvi.svg" alt="">
+                        </div>
+                        <div class="con-content">
+                            <h3>Sylvi</h3>
+                            <p class="con1-p">Stylish Watches for Men and Women</p>
+                        </div>
+                    </div>
+                    <p>
+                        While we boast an in-house marketing team, finding a proficient tech partner remained a
+                        challenge. We frequently needed expertise for theme customization and feature enhancements
+                        tailored to our marketing demands. Partnering with Hopiant has been transformative. They adeptly
+                        manage our store, ensuring that we can focus on our core operations without any tech-related
+                        worries.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide-con">
+                <div class="imageslide">
+                    <div class="contact-1">
+                        <div class="con-img">
+                            <img src="image/cltch.svg" alt="">
+                        </div>
+                        <div class="con-content">
+                            <h3>Clutch</h3>
+                            <p class="con1-p">Top Rated Digital Partner</p>
+                        </div>
+                    </div>
+                    <p>
+                        Partnering with Hopiant has been a game-changer for our online presence. They expertly tailored
+                        our premium Shopify theme to align flawlessly with our brand. Their deep understanding of the
+                        Shopify theme architecture and ecosystem stood out, ensuring a seamless customization process.
+                        Hopiant is now our ongoing tech partner.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide-con">
+                <div class="imageslide">
+                    <div class="contact-1">
+                        <div class="con-img">
+                            <img src="image/fiver.svg" alt="">
+                        </div>
+                        <div class="con-content">
+                            <h3>Fiverr</h3>
+                            <p class="con1-p">Global Freelance Marketplace</p>
+                        </div>
+                    </div>
+                    <p>
+                        We are amazed at how quickly and smartly they have set up and provided end-to-end solutions to
+                        run the A/B test. The insights we gained have been instrumental in refining our offerings and
+                        optimizing our user experience. If you’re looking for a team that marries technical know-how
+                        with a deep understanding of e-commerce analytics, look no further. We wholeheartedly recommend
+                        Hopiant Private Limited.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Slick Init -->
+    <script>
+        $(document).ready(function () {
+            $('.con-section').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                dots: false,
+                infinite: true,     // last → first
+                autoplay: false,
+                speed: 600,
+                prevArrow: $('#prevBtn'),
+                nextArrow: $('#nextBtn'),
+                swipe: true
+            });
+        });
+    </script>
+
+</body>
+
+</html>

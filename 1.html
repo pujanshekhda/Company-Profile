@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+
+        
+        <div class="faq-item">
+            <input type="checkbox" id="faq1">
+            <label for="faq1" class="faq-question">
+                PRODUCT DETAILS
+                <i class="fi fi-br-angle-small-right"></i>
+            </label>
+            <div class="faq-answer">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+         
+    </section>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Sofia Pro", sans-serif;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #234C63;
+            --text: #fff;
+        }
+
+        .container {
+            max-width: 1460px;
+            padding: 0px 15px;
+            margin: 0 auto;
+        }
+
+        .faq-section {
+            width: 100%;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .faq-section h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .faq-item input {
+            display: none;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 26px 0;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .faq-question i {
+            font-size: 22px;
+            transition: transform 0.7s ease;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1.4s ease-in-out;
+        }
+
+        .faq-answer p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #234C63;
+            line-height: 26px;
+        }
+
+        /* Open state */
+        .faq-item input:checked~.faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item input:checked~.faq-question i {
+            transform: rotate(90deg);
+        }
+    </style>
+
+    <script>        function openTab(evt, tabName) {
+            let i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.classList.add("active");
+        }</script>
+</body>
+
+</html>
