@@ -552,15 +552,16 @@
         text-decoration: underline;
     }
 
-    .blog-btn {
+   .blog-btn {
         font-size: 18px;
         font-weight: 700;
         line-height: 18px;
         display: flex;
         justify-content: center;
         margin-top: 50px;
+        padding-bottom: 75px;
     }
-
+    
     .blog-btn a {
         color: #fff;
         text-decoration: none;
